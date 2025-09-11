@@ -1,0 +1,137 @@
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #e6f0ff 0%, #c9e2ff 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 81, 255, 0.15);
+}
+
+h1 {
+    text-align: center;
+    color: #1a56db;
+    margin-bottom: 25px;
+    font-size: 28px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e6f0ff;
+}
+
+/* Estilos del formulario */
+#formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+label {
+    font-weight: 600;
+    color: #1a56db;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #dbeafe;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: #f8faff;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #3b82f6;
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
+    background-color: white;
+}
+
+input[type="submit"], button[type="reset"] {
+    width: auto;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+input[type="submit"] {
+    background: linear-gradient(to right, #2563eb, #1d4ed8);
+    color: white;
+    box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
+}
+
+input[type="submit"]:hover {
+    background: linear-gradient(to right, #1d4ed8, #1e40af);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(37, 99, 235, 0.3);
+}
+
+button[type="reset"] {
+    background-color: #eff6ff;
+    color: #3b82f6;
+    border: 1px solid #bfdbfe;
+}
+
+button[type="reset"]:hover {
+    background-color: #dbeafe;
+    transform: translateY(-2px);
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+/* Responsive design para móviles */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px 15px;}
+    h1 {font-size: 24px;}
+    .button-group {
+        flex-direction: column;
+        gap: 12px;} 
+    input[type="submit"], button[type="reset"]
+    {width: 100%;}
+}
+
+/* Estilos de validación */
+input:invalid, textarea:invalid {
+    border-color: #f87171;
+}
+
+input:valid, textarea:valid {
+    border-color: #4ade80;
+}
+
+/* Estilos para el select */
+select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231a56db' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 16px;
+    padding-right: 40px;
+}
